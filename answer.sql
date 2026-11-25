@@ -1,0 +1,51 @@
+-- Week 8 Assignment: MySQL Database Backup and Restore
+-- Note: mysqldump is a command-line utility, not an SQL statement.
+-- Run the commands shown below in your system terminal, not in the
+-- MySQL SQL query editor. They are shown as comments in this file.
+
+-- =========================================================
+-- QUESTION 1: CREATING A COMPLETE DATABASE BACKUP
+-- =========================================================
+-- Terminal command:
+-- mysqldump -u root -p sales > sales_backup.sql
+--
+-- Explanation:
+-- - mysqldump starts the MySQL backup utility.
+-- - -u root specifies root as the MySQL username.
+-- - -p prompts for the MySQL password.
+-- - sales is the database being backed up.
+-- - > sales_backup.sql saves the exported SQL statements in a file
+--   named sales_backup.sql in the terminal's current directory.
+--
+-- By default, this creates a logical backup containing the database's
+-- table definitions and table data. Regular backups help protect
+-- against accidental deletion, hardware failure, data corruption,
+-- and unsuccessful changes. They allow data to be restored after
+-- a problem and can support database migration.
+
+
+-- =========================================================
+-- QUESTION 2: BACKING UP ALL DATABASES
+-- =========================================================
+-- Terminal command:
+-- mysqldump -u root -p --all-databases > all_databases_backup.sql
+--
+-- Explanation:
+-- - mysqldump starts the MySQL backup utility.
+-- - -u root specifies root as the MySQL username.
+-- - -p prompts for the MySQL password.
+-- - --all-databases exports all databases accessible to the account.
+-- - > all_databases_backup.sql saves the export in the named file.
+--
+-- Backing up all databases before a server migration helps ensure
+-- that every database hosted on the server is available to transfer
+-- and restore. It reduces the risk of overlooking a database and
+-- provides a recovery point if the migration fails.
+
+
+-- =========================================================
+-- QUESTION 3
+-- =========================================================
+-- The assignment description mentions three questions, but the
+-- instructions supplied contain only Question 1 and Question 2.
+-- Add Question 3 once its task and requirements are provided.
